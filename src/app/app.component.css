@@ -1,0 +1,68 @@
+.base{
+    color:white;
+    display: grid;
+    grid-template-areas:
+    "zero zero zero zero"
+    "a b c d"
+    "e e e e"
+    "f f f f";
+    grid-template-columns: 25% 25% 25% 25%;
+    padding-bottom: 50px;
+}
+.header{
+    font-size: 2.5em;
+    grid-area:a;
+    margin-left: 15px;
+}
+.news {
+    font-size: 2.5em;
+    grid-area: c;
+    text-align: center;
+    }
+.tut {
+    font-size: 2.5em;
+    grid-area: b;
+    text-align: center;
+    }
+.button { 
+    grid-area: d; 
+    text-align: right;
+    margin-right:10px;
+    }
+.graph{ 
+    grid-area: e; 
+    margin-top:20px;
+    width:100vw;
+    }
+.routlet { 
+    grid-area: f;
+    width:100vw;
+} 
+.city{
+    text-align: right;
+    padding-right:10px;
+    background-color: grey;
+    color:black;
+    grid-area:zero;
+    font-weight: bolder ;
+    font-size: larger;
+    margin-bottom:20px;
+}
+@media screen and  (max-width:1000px){
+    .base{
+        grid-template-areas: 
+        "zero"
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f";
+        grid-template-columns: 100%;
+        grid-template-rows: max-content ;
+        text-align: center;
+    }
+    .button{
+        margin-right:0px;
+    }
+}

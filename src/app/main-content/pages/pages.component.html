@@ -1,0 +1,94 @@
+<div class="base">
+    <ngb-accordion #acc="ngbAccordion" class="filtered">
+        <ngb-panel title="&#9733;Rostelecom&#9733;">
+           <ng-template ngbPanelContent>
+            <div *ngFor='let item of RostelArticles' class="text">
+                Провайдер: {{ item.provider }} 
+                <br/>Город: {{ item.city }} 
+                <br/>Дата: {{ item.date1 }} 
+                <br/>Время: {{ item.date2}} 
+                <br/>Описание проблемы: {{ item.error }} 
+                <br/>Оценка: {{item.currentRate}}
+                <br/>----------------------<br/>
+            </div>
+          </ng-template>
+       </ngb-panel>
+       <ngb-panel title="&#9733;QWERTY&#9733;">
+           <ng-template ngbPanelContent>
+            <div *ngFor='let item of QWERTYArticles' class="text">
+                Провайдер: {{ item.provider }} 
+                <br/>Город: {{ item.city }} 
+                <br/>Дата: {{ item.date1 }} 
+                <br/>Время: {{ item.date2}} 
+                <br/>Описание проблемы: {{ item.error }} 
+                <br/>Оценка: {{item.currentRate}}
+                <br/>----------------------<br/>
+            </div>
+           </ng-template>
+       </ngb-panel>
+       <ngb-panel title="&#9733;MGTS&#9733;">
+          <ng-template ngbPanelContent>
+            <div *ngFor='let item of MGTSArticles' class="text">
+                Провайдер: {{ item.provider }} 
+                <br/>Город: {{ item.city }} 
+                <br/>Дата: {{ item.date1 }} 
+                <br/>Время: {{ item.date2}} 
+                <br/>Описание проблемы: {{ item.error }} 
+                <br/>Оценка: {{item.currentRate}}
+                <br/>----------------------<br/>
+            </div>
+          </ng-template>
+      </ngb-panel>
+     <ngb-panel title="&#9733;Avocado&#9733;">
+           <ng-template ngbPanelContent>
+            <div *ngFor='let item of AvocadoArticles' class="text">
+                Провайдер: {{ item.provider }} 
+                <br/>Город: {{ item.city }} 
+                <br/>Дата: {{ item.date1 }} 
+                <br/>Время: {{ item.date2}} 
+                <br/>Описание проблемы: {{ item.error }} 
+                <br/>Оценка: {{item.currentRate}}
+                <br/>----------------------<br/>
+            </div>
+          </ng-template>
+        </ngb-panel>
+     <ngb-panel title="&#9733;SpeedyLine&#9733;">
+          <ng-template ngbPanelContent>
+            <div *ngFor='let item of SpeedyArticles' class="text">
+                Провайдер: {{ item.provider }} 
+                <br/>Город: {{ item.city }} 
+                <br/>Дата: {{ item.date1 }} 
+                <br/>Время: {{ item.date2}} 
+                <br/>Описание проблемы: {{ item.error }} 
+                <br/>Оценка: {{item.currentRate}}
+                <br/>----------------------<br/>
+            </div> 
+          </ng-template>
+     </ngb-panel>
+     <ngb-panel title="&#9733;Другие&#9733;">
+          <ng-template ngbPanelContent >
+            <div *ngFor='let item of drArticles' class="text">
+                Провайдер: {{ item.provider }} 
+                <br/>Город: {{ item.city }} 
+                <br/>Дата: {{ item.date1 }} 
+                <br/>Время: {{ item.date2}} 
+                <br/>Описание проблемы: {{ item.error }} 
+                <br/>Оценка: {{item.currentRate}}
+                <br/>----------------------<br/>
+            </div>
+          </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+    <div class="all">
+        <div *ngFor='let item of allArticles'>
+            Провайдер: {{ item.provider }} 
+            <br/>Город: {{ item.city }} 
+            <br/>Дата: {{ item.date1 }} 
+            <br/>Время: {{ item.date2}} 
+            <br/>Описание проблемы: {{ item.error }} 
+            <br/>Оценка: {{item.currentRate}}
+            <br/>----------------------<br/>
+        </div>
+    </div>
+</div>
+

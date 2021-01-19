@@ -1,0 +1,14 @@
+.article{
+    color:black;
+    width: 100vw;
+    text-align: center;
+    padding-right:2vw;
+    padding-left:2vw;
+    padding-top:3vw;
+}
+@media screen and (max-width:1000px){
+    .article{
+        padding-right:0vw;
+        padding-left:0vw;
+    }
+}

@@ -1,0 +1,40 @@
+.star {
+    font-size: 1.5rem;
+    color: #acadad;
+}
+.filled {
+    color: gold;
+}
+
+.form{
+    background-color:#2f2f2f;
+    text-align:right;
+}
+.size{
+    font-size: 1em;
+}
+@media screen and  (max-width:1000px){
+    .form{
+        text-align:center;
+    }
+    .size{
+        font-size: 1em;
+    }
+}
+@media screen and  (max-width:500px){
+    .size{
+        font-size: 0.8em;
+    }
+
+}
+@media screen and  (max-width:410px){
+    .size{
+        font-size: 0.6em;
+    }
+
+}
+@media screen and  (max-width:290px){
+    .size{
+        font-size: 0.4em;
+    }
+}

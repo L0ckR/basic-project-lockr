@@ -1,0 +1,41 @@
+<body class="form">
+<ng-template #content let-modal class="base" >
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Опишите проблему</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <form >
+          <p>Провайдер:
+            <select name="provider" [(ngModel)]='article.provider'>
+              <option value="Rostelecom">Rostelecom</option>
+              <option value="QWERTY">QWERTY</option>
+              <option value="MGTS">MGTS</option>
+              <option value="Avocado">Avocado</option>
+              <option value="SpeedyLine">SpeedyLine</option>
+              <option value="Drugoi">Другой</option>
+            </select>
+          </p>
+          <p></p><div *ngIf="article.provider=='Drugoi'">Введите название: <input type="text" [(ngModel)]='drProvider' name="drProv" placeholder=""></div><p></p>
+          <p>В каком городе произошел сбой:<input type="text" [(ngModel)]='article.city' name="city"></p>
+          <p>Дата сбоя:<input type="date" [(ngModel)]='article.date1' name="date1"></p>
+          <p>Время сбоя:<input type="time" [(ngModel)]='article.date2' name="date2"></p>
+          <p>Описание проблемы:</p><textarea cols="60" rows="8" [(ngModel)]='article.error' placeholder="" name="error" class="size"></textarea>
+          <p>Оцените качество услуг провайдера:
+            <ngb-rating [(rate)]="article.currentRate">
+              <ng-template let-fill="fill" let-index="index">
+                <span class="star" [class.filled]="fill === 100">&#9733;</span>
+              </ng-template>
+            </ngb-rating>
+          </p>
+          <input (click)="addNewArticle()" type="sumbit" class="btn btn-outline-dark" (click)="modal.close('Save click')" value="Отправить">
+        </form>
+        
+    </div>
+    
+</ng-template>
+  
+  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Сообщить о сбое</button>
+</body>
